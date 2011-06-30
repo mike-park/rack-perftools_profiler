@@ -20,7 +20,7 @@ module Rack::PerftoolsProfiler
     end
 
     def call(env)
-      @env = env.clone
+      @env = env
       action = Action.for_env(@env, @profiler, self)
       action.act
       action.response
