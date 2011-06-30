@@ -1,3 +1,5 @@
+[ The only change I made was to remove the cloning of env to avoid breaking devise (and other middleware that manipulates the environment).  This probably means (untested) that the __start__ & __stop__ method does not work. However, the plus side is that single url calls can be profiled even when using authentication with devise. ]
+
 = Rack::PerftoolsProfiler
 
 Middleware for profiling Rack-compatible apps using perftools.rb (http://github.com/tmm1/perftools.rb)
